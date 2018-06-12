@@ -38,6 +38,3 @@ jspm_packages
 
 # graphql files on the root dir
 /*.graphql
-
-# es5 output dir
-/dist/
