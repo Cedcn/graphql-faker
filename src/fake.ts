@@ -190,6 +190,7 @@ const fakeFunctions = {
   word: () => faker.random.word(),
   words: () => faker.random.words(),
   locale: () => faker.random.locale(),
+  number: () => faker.random.number(),
 
   // System section
   // Skipped: faker.system.fileName

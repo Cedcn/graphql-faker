@@ -121,6 +121,7 @@ enum fake__Types {
   word
   words
   locale
+  number
 
   filename
   mimeType
