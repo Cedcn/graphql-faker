@@ -179,7 +179,12 @@ var fakeFunctions = {
     word: function () { return faker.random.word(); },
     words: function () { return faker.random.words(); },
     locale: function () { return faker.random.locale(); },
-    number: function () { return faker.random.number(); },
+    number: {
+        args: ['maxNumber', 'minNumber', 'precision'],
+        func: function (max, min, precision) { return faker.random.number({
+            max: max, min: min, precision: precision
+        }); }
+    },
     // System section
     // Skipped: faker.system.fileName
     // TODO: Add ext and type

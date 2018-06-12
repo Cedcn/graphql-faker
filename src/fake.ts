@@ -190,7 +190,12 @@ const fakeFunctions = {
   word: () => faker.random.word(),
   words: () => faker.random.words(),
   locale: () => faker.random.locale(),
-  number: () => faker.random.number(),
+  number: {
+    args: ['maxNumber', 'minNumber', 'precision'],
+    func: (max, min, precision) => faker.random.number({
+      max, min, precision
+    })
+  },
 
   // System section
   // Skipped: faker.system.fileName
