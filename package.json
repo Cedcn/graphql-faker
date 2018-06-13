@@ -6,7 +6,7 @@
   "bin": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e ts --exec 'ts-node src/index.ts'",
+    "start": "nodemon -e ts --exec 'ts-node src/index.ts' -p 9999",
     "debug": "ts-node --inspect --compilerOptions '{\"inlineSources\":true}' src/index.ts",
     "build:editor": "cd src/editor && yarn && npm run build && cd -",
     "build:typescript": "tsc",
@@ -46,7 +46,7 @@
     "express": "4.16.3",
     "express-graphql": "github:apis-guru/express-graphql#rootValue_dist",
     "faker": "4.1.0",
-    "graphql": "github:apis-guru/graphql-js#directives-fork-dist",
+      "graphql": "github:apis-guru/graphql-js#directives-fork-dist",
     "lodash": "4.17.10",
     "moment": "2.22.2",
     "node-fetch": "2.1.2",

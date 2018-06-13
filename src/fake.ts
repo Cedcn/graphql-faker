@@ -48,6 +48,10 @@ export const typeFakers = {
 };
 
 const fakeFunctions = {
+  constant: {
+    args: ['value'],
+    func: (value) => value,
+  },
   // Address section
   zipCode: () => faker.address.zipCode(),
   city: () => faker.address.city(),

@@ -47,6 +47,10 @@ exports.typeFakers = {
     },
 };
 var fakeFunctions = {
+    constant: {
+        args: ['value'],
+        func: function (value) { return value; },
+    },
     // Address section
     zipCode: function () { return faker.address.zipCode(); },
     city: function () { return faker.address.city(); },

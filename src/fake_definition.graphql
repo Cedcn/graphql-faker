@@ -39,6 +39,7 @@ enum fake__Locale {
 }
 
 enum fake__Types {
+  constant
   zipCode
   city
   streetName
@@ -160,6 +161,8 @@ input fake__color {
   blue255: Int = 0
 }
 
+scalar examples__JSON
+
 input fake__options {
   # Only for type `streetAddress`
   useFullAddress: Boolean
@@ -190,12 +193,11 @@ input fake__options {
   maxNumber: Int
   minNumber: Int
   precision: Int
+  value: examples__JSON
   # Only for type `colorHex`. [Details here](https://stackoverflow.com/a/43235/4989887)
   baseColor: fake__color = { red255: 0, green255: 0, blue255: 0 }
 }
 
 directive @fake(type:fake__Types!, options: fake__options = {}, locale:fake__Locale) on FIELD_DEFINITION | SCALAR
 
-
-scalar examples__JSON
 directive @examples(values: [examples__JSON]!) on FIELD_DEFINITION | SCALAR
